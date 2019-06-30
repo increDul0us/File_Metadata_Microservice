@@ -14,9 +14,6 @@ router.route('/get-file-size/')
     "file_size": `${req.file.size} bytes`
   };
  
-  res.json(fileInfo);
-  //Deleting the file because we currently are not managing the upload files  
-  fs.unlinkSync(req.file.path);
-})
+ 
 
 module.exports = router;
